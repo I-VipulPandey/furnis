@@ -928,6 +928,7 @@ footer {
     footer {
         margin: 0 0;
         flex-direction: column;
+        gap: 8vh;
     }
 
     #contact-us {
@@ -961,7 +962,7 @@ footer {
     }
 
     #contact-us h6{
-        bottom: 5%;
+        bottom: 1%;
         font-size: 3vw;
         left: 33vw;
     }
@@ -984,6 +985,7 @@ footer {
         margin-right: initial;
         justify-content: initial;
         gap: 2vh;
+        height: 30vh;
     }
 
 
