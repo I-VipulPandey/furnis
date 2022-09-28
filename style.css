@@ -58,11 +58,16 @@ nav {
     text-transform: uppercase;
 }
 
+
+#link-part::-webkit-scrollbar{
+    display: none;
+}
 #link-part {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 40vw;
+    height: 8vh;
 
 
 }
@@ -97,6 +102,7 @@ nav {
 .main-container #left {
     position: relative;
     width: 50vw;
+    height: 60vh;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -107,16 +113,23 @@ nav {
 
 }
 
+.upper{
+    overflow: hidden;
+}
+
 .main-container #left h4 {
     color: #ebd774;
     font-family: "oldenburg";
     font-size: 2vw;
+    overflow: hidden;
 }
 
 .main-container #left h2 {
     text-transform: uppercase;
     font-size: 4vw;
     width: 50vw;
+    overflow: hidden;
+
 }
 
 .main-container #left h5 {
@@ -124,6 +137,8 @@ nav {
     font-family: "oldenburg";
     font-weight: 200;
     font-size: 1.2 vw;
+    overflow: hidden;
+
 
 }
 
@@ -131,6 +146,8 @@ nav {
     height: 5vh;
     width: 9vw;
     border: 1.5px solid black;
+    overflow: hidden;
+
 }
 
 .main-container #right {
@@ -199,7 +216,7 @@ nav {
 }
 
 #page2 #left #lft-img {
-    height: 40vh;
+    height: 0vh;
     width: 30vw;
     background-image: url("https://i.pinimg.com/564x/f2/10/fa/f210fad6bc09c7001d551ccd5a9fa39c.jpg");
     background-position: bottom;
@@ -246,7 +263,7 @@ nav {
 }
 
 #page2 #right #right-img {
-    height: 30vh;
+    height: 0vh;
     width: 15vw;
     background-image: url("https://i.pinimg.com/564x/63/1a/0f/631a0f610054c297f1b1fe3f502f8017.jpg");
     background-position: center;
@@ -308,7 +325,7 @@ nav {
 
 #page3 #left #left-img {
 
-    height: 45vh;
+    height: 0vh;
     width: 28vw;
     background-image: url("https://i.pinimg.com/474x/5e/a5/1e/5ea51e8db0d0c7d8528cae607f30c6c2.jpg");
     background-position: center;
@@ -353,7 +370,7 @@ nav {
 
 #page3 #right #right-img {
     position: relative;
-    height: 50vh;
+    height: 0vh;
     width: 35vw;
     background-image: url("https://i.pinimg.com/474x/78/f7/98/78f798b5a3316adf5e75cf2cc21eda79.jpg");
     background-position: center;
@@ -414,7 +431,7 @@ nav {
 }
 
 #page4 .part #part1-img {
-    height: 40vh;
+    height: 0vh;
     width: 32vw;
     background-image: url("https://i.pinimg.com/474x/55/c9/c3/55c9c31463c2f4029c9d341f37ae09c5.jpg");
     transform: scale(0.7);
@@ -475,7 +492,7 @@ nav {
 }
 
 #page4 .part #part2-img {
-    height: 40vh;
+    height: 0vh;
     width: 32vw;
     background-image: url("https://i.pinimg.com/474x/b5/49/d3/b549d3999844477b1fbf3e9df16f1592.jpg");
     background-position: top;
@@ -484,7 +501,7 @@ nav {
 }
 
 #page4 .part #part3-img {
-    height: 40vh;
+    height: 0vh;
     width: 32vw;
     background-image: url("assets/wine\ cork.png");
     background-position: bottom;
@@ -568,7 +585,6 @@ footer {
 
 }
 
-
 #contact p::first-letter{
     font-weight: 900;
     color: black;
@@ -651,4 +667,102 @@ footer {
     font-size: 1vw;
     bottom: 1%;
     left: 45vw;
+}
+
+
+
+@media only screen and (max-width:500px) {
+
+
+    #logo-part span{
+        font-size: 2.4vw;
+    }
+
+    #logo-part {
+        width: 15vw;
+    }
+
+    #link-part{
+        width: 54vw;
+    }
+
+    #link-part a{
+        font-size: 1.8vw;
+    }
+
+    #icon-part i{
+        font-size: 2vw;
+    }
+
+    .main-container{
+        margin-top: 7vh;
+        gap: 3vh;
+    }
+
+    .main-container #left{
+        padding-left: 5vh;
+        padding-top: initial;
+        height: initial;
+        gap: 3vh;
+    }
+
+    .main-container #left button{
+        width: 24vw;
+        height: 4vh;
+    }
+
+    .main-container #right{
+        padding-left: initial;
+        padding-top: initial;
+    }
+
+    .main-container #right #clock-div{
+        height: 20vh;
+        width: 37vw;
+    }
+
+    #page2 #left #lft-img{
+        width: 46vw;
+        transform: scale(1);
+    }
+
+    #page2 #left{
+        flex-direction: column;
+        height: 50vh;
+    }
+
+    #page2 #left #lft-content{
+        gap: 2vh;
+        padding: initial;
+    }
+
+    #page2 #left #lft-content h2{
+        font-size: 3.3vw;
+    }
+
+    #page2 #left #lft-content{
+        height: 21vh;
+    }
+
+    #page2 #left #lft-content p{
+        font-size: 1.8vw;
+    }
+
+    #page2 #left #lft-content button{
+
+        width: 25vw;
+        height: 4vh;
+    }
+    #page2 #right{
+        width: 52vw;
+        height: 50vh;
+    }
+
+    #page2 #right #right-img{
+        width: 45vw;
+        transform: scale(0.8);
+    }
+
+
+
 }
