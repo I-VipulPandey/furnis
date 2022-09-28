@@ -59,14 +59,15 @@ nav {
 }
 
 
-#link-part::-webkit-scrollbar{
+#link-part::-webkit-scrollbar {
     display: none;
 }
+
 #link-part {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 40vw;
+    width: 30vw;
     height: 8vh;
 
 
@@ -77,6 +78,7 @@ nav {
     color: black;
     text-transform: uppercase;
     font-size: 1.2vw;
+    overflow: hidden;
 }
 
 #icon-part {
@@ -113,7 +115,7 @@ nav {
 
 }
 
-.upper{
+.upper {
     overflow: hidden;
 }
 
@@ -561,7 +563,7 @@ footer {
 
     font-size: 3vw;
     text-transform: uppercase;
-    
+
 
 }
 
@@ -585,7 +587,7 @@ footer {
 
 }
 
-#contact p::first-letter{
+#contact p::first-letter {
     font-weight: 900;
     color: black;
 }
@@ -599,7 +601,7 @@ footer {
     margin-top: 20vh;
 }
 
-#links a{
+#links a {
     text-decoration: none;
     color: black;
     text-transform: uppercase;
@@ -607,11 +609,11 @@ footer {
     font-size: 1.2vw;
 }
 
-#links a:hover{
+#links a:hover {
     color: black;
 }
 
-#subscribe{
+#subscribe {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -622,22 +624,22 @@ footer {
 
 }
 
-#subscribe h3{
+#subscribe h3 {
     font-family: "oldenburg";
     font-size: 1.4vw;
 }
 
-#subscribe h2{
+#subscribe h2 {
     font-size: 2.3vw;
     text-transform: uppercase;
 }
 
-#subscribe p{
+#subscribe p {
     font-size: 0.9vw;
     text-align: center;
 }
 
-#subscribe input{
+#subscribe input {
     border: none;
     width: 20vw;
     font-size: 1.3vw;
@@ -658,11 +660,11 @@ footer {
     transition: all cubic-bezier(0.19, 1, 0.22, 1)1s;
 }
 
-#subscribe button:hover{
+#subscribe button:hover {
     background-color: rgb(56, 55, 55);
 }
 
-#contact-us h6{
+#contact-us h6 {
     position: absolute;
     font-size: 1vw;
     bottom: 1%;
@@ -674,94 +676,342 @@ footer {
 @media only screen and (max-width:500px) {
 
 
-    #logo-part span{
-        font-size: 2.4vw;
+    #logo-part span {
+        font-size: 2.8vw;
     }
 
     #logo-part {
         width: 15vw;
     }
 
-    #link-part{
-        width: 54vw;
+    #link-part {
+        width: 45vw;
     }
 
-    #link-part a{
-        font-size: 1.8vw;
+    #link-part a {
+        font-size: 2.3vw;
+        overflow: hidden;
     }
 
-    #icon-part i{
-        font-size: 2vw;
+    #icon-part {
+        width: 15vw;
     }
 
-    .main-container{
-        margin-top: 7vh;
+    #icon-part i {
+        font-size: 4vw;
+    }
+
+    .main-container {
         gap: 3vh;
     }
 
-    .main-container #left{
+    .main-container #left {
         padding-left: 5vh;
         padding-top: initial;
-        height: initial;
+        height: 40vh;
         gap: 3vh;
     }
 
-    .main-container #left button{
+    .main-container #left button {
         width: 24vw;
         height: 4vh;
     }
 
-    .main-container #right{
+    .main-container #right {
         padding-left: initial;
         padding-top: initial;
     }
 
-    .main-container #right #clock-div{
+    .main-container #right #clock-div {
         height: 20vh;
         width: 37vw;
+
     }
 
-    #page2 #left #lft-img{
-        width: 46vw;
+    #page2 {
+        margin: 0 0;
+    }
+
+    #page2 #left #lft-img {
+        width: 45vw;
+        height: 0vh;
         transform: scale(1);
+        margin-bottom: 2vh;
     }
 
-    #page2 #left{
+    #page2 #left {
         flex-direction: column;
-        height: 50vh;
+        height: 45vh;
     }
 
-    #page2 #left #lft-content{
+    #page2 #left #lft-content {
         gap: 2vh;
         padding: initial;
     }
 
-    #page2 #left #lft-content h2{
+    #page2 #left #lft-content h2 {
         font-size: 3.3vw;
     }
 
-    #page2 #left #lft-content{
+    #page2 #left #lft-content {
         height: 21vh;
     }
 
-    #page2 #left #lft-content p{
+    #page2 #left #lft-content p {
         font-size: 1.8vw;
     }
 
-    #page2 #left #lft-content button{
+    #page2 #left #lft-content button {
 
-        width: 25vw;
-        height: 4vh;
+        width: 20vw;
+        height: 3vh;
+        font-size: 1.8vw;
     }
-    #page2 #right{
+
+    #page2 #right {
         width: 52vw;
-        height: 50vh;
+        height: 45vh;
+        padding-top: 8vh;
     }
 
-    #page2 #right #right-img{
+    #page2 #right #right-img {
         width: 45vw;
-        transform: scale(0.8);
+        height: 0vh;
+        transform: scale(0.6);
     }
+
+    #page2 #right #right-content {
+        width: 36vw;
+        position: relative;
+        top: -2vh;
+        gap: 1vh;
+
+    }
+
+    #page2 #right #right-content h4 {
+        font-size: 2.5vw;
+    }
+
+    #page2 #right #right-content h3 {
+        font-size: 3.3vw;
+    }
+
+    #page2 #right #right-content p {
+        font-size: 1.8vw;
+    }
+
+
+    #page3 #left {
+        height: 30vh;
+        width: 50vw;
+    }
+
+    #page3 #left #left-img {
+        height: 0vh;
+        width: 40vw;
+    }
+
+    #page3 #left #left-content {
+        width: 44vw;
+        gap: 1vh;
+    }
+
+    #page3 #left #left-content h4 {
+        font-size: 2.3vw;
+    }
+
+    #page3 #left #left-content h2 {
+
+        font-size: 3.3vw;
+    }
+
+    #page3 #left #left-content p {
+
+        font-size: 1.8vw;
+    }
+
+    #page3 #right {
+        height: 30vh;
+        width: 50vw;
+        flex-direction: column;
+    }
+
+    #page3 #right #right-img {
+        left: initial;
+        height: 0vh;
+    }
+
+    #page3 #right #right-content {
+        gap: 1vh;
+        width: 38vw;
+        height: 25vh;
+    }
+
+    #page3 #right #right-content h2 {
+        font-size: 3.3vw;
+    }
+
+    #page3 #right #right-content p {
+        font-size: 1.8vw;
+    }
+
+    #page3 #right #right-content button {
+        height: 3vh;
+        width: 20vw;
+        font-size: 1.8vw;
+    }
+
+    #page4 {
+        flex-direction: column;
+    }
+
+    #page4 .part {
+        height: 25vh;
+        width: 95vw;
+        flex-direction: initial;
+        margin-left: initial;
+        justify-content: initial;
+        gap: 3vw;
+    }
+
+    #page4 .part #part1-img {
+        height: 0vh;
+        width: 55vw;
+    }
+
+    #page4 .part #part1-content h4 {
+        font-size: 2.3vw;
+    }
+
+    #page4 .part #part1-content h2 {
+        font-size: 3.3vw;
+    }
+
+    #page4 .part #part2-img {
+        height: 0vh;
+        width: 55vw;
+    }
+
+    #page4 .part #part2-content {
+        width: 64vw;
+    }
+
+    #page4 .part #part2-content h4 {
+        font-size: 2.3vw;
+    }
+
+    #page4 .part #part2-content h2 {
+        font-size: 3.3vw;
+    }
+
+    #page4 .part #part2-content p {
+        font-size: 1.8vw;
+    }
+
+    #page4 .part #part3-content {
+        width: 50vw;
+    }
+
+    #page4 .part #part3-img {
+        height: 0vh;
+        width: 55vw;
+    }
+
+    #page4 .part #part3-content h4 {
+        font-size: 2.3vw;
+    }
+
+    #page4 .part #part3-content h2 {
+        font-size: 3.3vw;
+    }
+
+    footer {
+        margin: 0 0;
+        flex-direction: column;
+    }
+
+    #contact-us {
+        height: 30vh;
+        width: 90vw;
+        justify-content: initial;
+        gap: 20vw;
+    }
+
+    #contact {
+        height: 20vh;
+        justify-content: initial;
+        gap: 1vh;
+        margin-left: 5vh;
+    }
+
+    #contact h2 {
+        font-size: 5vw;
+    }
+
+    #contact h4 {
+        font-size: 1.8vw;
+    }
+
+    #contact h3 {
+        font-size: 2.5vw;
+    }
+
+    #contact p {
+        font-size: 2vw;
+    }
+
+    #contact-us h6{
+        bottom: 5%;
+        font-size: 3vw;
+        left: 33vw;
+    }
+
+    #links {
+        height: 20vh;
+        margin-top: initial;
+        justify-content: initial;
+        gap: 1.5vh;
+        padding-top: 5vh;
+    }
+
+    #links a {
+        font-size: 2.4vw;
+
+    }
+
+    #subscribe {
+        margin-top: initial;
+        margin-right: initial;
+        justify-content: initial;
+        gap: 2vh;
+    }
+
+
+    #subscribe h3 {
+        font-size: 5vw;
+    }
+
+    #subscribe h2{
+        font-size: 3.3vw;
+    }
+
+    #subscribe p{
+        font-size: 2vw;
+    }
+
+    #subscribe input{
+        font-size: 2.5vw;
+        width: 57vw;
+    }
+
+
+    #subscribe button{
+
+        height: 3vh;
+        width: 30vw;
+        font-size: 2vw;
+    }
+
 
 
 

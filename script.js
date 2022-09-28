@@ -31,105 +31,188 @@ function show() {
 }
 
 
+function NavAndMainPageAnimation(){
+  gsap.from(".upper", {
+
+    y: "150%",
+    duration: 1,
+    opacity: 1,
+  
+  
+  })
+  
+  gsap.from("#link-part a", {
+  
+    y: "-120%",
+    duration: 1,
+    stagger: .1,
+    opacity: 1,
+  
+  
+  
+  })
+  
+  gsap.from(".leftse", {
+  
+    x: "-150%",
+    duration: 1,
+    delay: 'none',
+    opacity: 1,
+  
+  
+  
+  })
+
+}
+
+function ImageAnimationMobile(){
+
+  gsap.to("#page2 #left #lft-img", {
+
+    scrollTrigger: {
+      trigger: "#page2 #left #lft-img",
+      scroller: "#main",
+      end: "top 30%",
+      scrub: true,
+    },
+    height: "25vh",
+  })
+  
+  
+  
+  gsap.to("#page2 #right #right-img", {
+  
+    scrollTrigger: {
+      trigger: "#page2 #right #right-img",
+      scroller: "#main",
+      end: "top 50%",
+      scrub: true,
+    },
+    height: "25vh",
+  })
+  
+  
+  gsap.to("#page3 #left #left-img ", {
+  
+    scrollTrigger: {
+      trigger: "#page3 #left #left-img ",
+      scroller: "#main",
+      end: "top 50%",
+      scrub: true,
+    },
+    height: "25vh",
+  })
+  
+  gsap.to("#page3 #right #right-img ", {
+  
+    scrollTrigger: {
+      trigger: "#page3 #right #right-img",
+      scroller: "#main",
+      end: "top 30%",
+      scrub: true,
+    },
+    height: "25vh",
+  })
+  
+  
+  
+  
+  gsap.to(".img-anim", {
+  
+    scrollTrigger: {
+      trigger: ".img-anim",
+      scroller: "#main",
+      end: "top 30%",
+      scrub: true,
+    },
+    height: "21vh",
+  })
+
+}
+
+function ImageAnimation(){
+
+
+  gsap.to("#page2 #left #lft-img", {
+
+    scrollTrigger: {
+      trigger: "#page2 #left #lft-img",
+      scroller: "#main",
+      end: "top 50%",
+      scrub: true,
+    },
+    height: "40vh",
+  })
+  
+  
+  
+  gsap.to("#page2 #right #right-img", {
+  
+    scrollTrigger: {
+      trigger: "#page2 #right #right-img",
+      scroller: "#main",
+      end: "top 50%",
+      scrub: true,
+    },
+    height: "35vh",
+  })
+  
+  
+  gsap.to("#page3 #left #left-img ", {
+  
+    scrollTrigger: {
+      trigger: "#page3 #left #left-img ",
+      scroller: "#main",
+      end: "top 50%",
+      scrub: true,
+    },
+    height: "45vh",
+  })
+  
+  gsap.to("#page3 #right #right-img ", {
+  
+    scrollTrigger: {
+      trigger: "#page3 #right #right-img",
+      scroller: "#main",
+      end: "top 30%",
+      scrub: true,
+    },
+    height: "50vh",
+  })
+  
+  
+  
+  
+  gsap.to(".img-anim", {
+  
+    scrollTrigger: {
+      trigger: ".img-anim",
+      scroller: "#main",
+      end: "top 30%",
+      scrub: true,
+    },
+    height: "40vh",
+  })
+
+
+}
+
+
+if (window.innerWidth<=500) {
+
 show();
+NavAndMainPageAnimation();
+ImageAnimationMobile();
 
+  
+}
 
+else{
 
-
-gsap.from(".upper", {
-
-  y: "150%",
-  duration: 2,
-  opacity: 1,
-
-
-})
-
-gsap.from("#link-part a", {
-
-  y: "150%",
-  duration: 2,
-  stagger: .1,
-  opacity: 1,
-
-
-
-})
-
-gsap.from(".leftse", {
-
-  x: "-150%",
-  duration: 2,
-  delay: 'none',
-  opacity: 1,
-
-
-
-})
-
-
-gsap.to("#page2 #left #lft-img", {
-
-  scrollTrigger: {
-    trigger: "#page2 #left #lft-img",
-    scroller: "#main",
-    end: "top 50%",
-    scrub: true,
-  },
-  height: "40vh",
-})
-
-
-
-gsap.to("#page2 #right #right-img", {
-
-  scrollTrigger: {
-    trigger: "#page2 #right #right-img",
-    scroller: "#main",
-    end: "top 50%",
-    scrub: true,
-  },
-  height: "35vh",
-})
-
-
-gsap.to("#page3 #left #left-img ", {
-
-  scrollTrigger: {
-    trigger: "#page3 #left #left-img ",
-    scroller: "#main",
-    end: "top 50%",
-    scrub: true,
-  },
-  height: "45vh",
-})
-
-gsap.to("#page3 #right #right-img ", {
-
-  scrollTrigger: {
-    trigger: "#page3 #right #right-img",
-    scroller: "#main",
-    end: "top 30%",
-    scrub: true,
-  },
-  height: "50vh",
-})
-
-
-
-
-gsap.to(".img-anim", {
-
-  scrollTrigger: {
-    trigger: ".img-anim",
-    scroller: "#main",
-    end: "top 30%",
-    scrub: true,
-  },
-  height: "40vh",
-})
-
-
+  show();
+NavAndMainPageAnimation();
+ImageAnimation();
+}
 
 
 
