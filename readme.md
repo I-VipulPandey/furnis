@@ -31,7 +31,7 @@ The website is designed to be easy to use and navigate. Users can browse differe
 
 This project was created as a demonstration of HTML, CSS, and JavaScript skills, and is therefore not a live implementation of the Ecommerce store. It is intended solely as a portfolio piece and to showcase front-end development abilities.
 
-A live demo of the website can be found at [https://i-vipulpandey.github.io/GetTala-website-redesigned/](https://i-vipulpandey.github.io/GetTala-website-redesigned/).
+A live demo of the website can be found at [https://i-vipulpandey.github.io/E-commerce-Store-web-page/](https://i-vipulpandey.github.io/E-commerce-Store-web-page/).
 
 ## Contributing
 
