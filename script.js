@@ -1,222 +1,63 @@
-function show() {
-  gsap.registerPlugin(ScrollTrigger);
+
+document.querySelector('.home').addEventListener('click', function (e) {
+  e.preventDefault()
+
+  document.querySelector('#page1').scrollIntoView({ behavior: "smooth" })
+
+})
 
 
-  const locoScroll = new LocomotiveScroll({
-    el: document.querySelector("#main"),
-    smooth: true
-  });
-  // each time Locomotive Scroll updates, tell ScrollTrigger to update too (sync positioning)
-  locoScroll.on("scroll", ScrollTrigger.update);
+document.querySelector('.shop').addEventListener('click', function (e) {
+  e.preventDefault()
 
-  // tell ScrollTrigger to use these proxy methods for the "#main" element since Locomotive Scroll is hijacking things
-  ScrollTrigger.scrollerProxy("#main", {
-    scrollTop(value) {
-      return arguments.length ? locoScroll.scrollTo(value, 0, 0) : locoScroll.scroll.instance.scroll.y;
-    }, // we don't have to define a scrollLeft because we're only scrolling vertically.
-    getBoundingClientRect() {
-      return { top: 0, left: 0, width: window.innerWidth, height: window.innerHeight };
-    },
-    // LocomotiveScroll handles things completely differently on mobile devices - it doesn't even transform the container at all! So to get the correct behavior and avoid jitters, we should pin things with position: fixed on mobile. We sense it by checking to see if there's a transform applied to the container (the LocomotiveScroll-controlled element).
-    pinType: document.querySelector("#main").style.transform ? "transform" : "fixed"
-  });
+  document.querySelector('#page2').scrollIntoView({ behavior: "smooth" })
+
+})
+
+document.querySelector('.blog').addEventListener('click', function (e) {
+  e.preventDefault()
+
+  document.querySelector('#page5').scrollIntoView({ behavior: "smooth" })
+
+})
+
+document.querySelector('.contact').addEventListener('click', function (e) {
+  e.preventDefault()
+
+  document.querySelector('footer').scrollIntoView({ behavior: "smooth" })
+
+})
+
+function OpenCloseButton() {
+
+  var menu = document.querySelector("#menu");
+  var full = document.querySelector("#fullscreen-nav");
+  var line1 = document.querySelector("#line1");
+  var line2 = document.querySelector("#line2"); 
+
+  var clickCounter = 1;
+
+  menu.addEventListener("click", function () {
+    if (clickCounter === 1) {
+
+      full.style.transform = `translateX(0%)`;
 
 
-  // each time the window updates, we should refresh ScrollTrigger and then update LocomotiveScroll. 
-  ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
+      line1.style.transform = `rotate(45deg) translate(-7px, 5px)`;
+      line2.style.transform = `rotate(-45deg) translate(-1px, -13px)`;
+       
 
-  // after everything is set up, refresh() ScrollTrigger and update LocomotiveScroll because padding may have been added for pinning, etc.
-  ScrollTrigger.refresh();
+      clickCounter = 0;
+    } else {
+      full.style.transform = `translateX(-100%)`;
+      line1.style.transform = `initial`;
+      line2.style.transform = `initial`;
 
-}
+      clickCounter = 1;
+    }
 
-
-function NavAndMainPageAnimation(){
-  gsap.from(".upper", {
-
-    y: "150%",
-    duration: 1,
-    opacity: 1,
-  
-  
-  })
-  
-  gsap.from("#link-part a", {
-  
-    y: "-120%",
-    duration: 1,
-    stagger: .1,
-    opacity: 1,
-  
-  
-  
-  })
-  
-  gsap.from(".leftse", {
-  
-    x: "-150%",
-    duration: 1,
-    delay: 'none',
-    opacity: 1,
-  
-  
-  
   })
 
 }
 
-function ImageAnimationMobile(){
-
-  gsap.to("#page2 #left #lft-img", {
-
-    scrollTrigger: {
-      trigger: "#page2 #left #lft-img",
-      scroller: "#main",
-      end: "top 30%",
-      scrub: true,
-    },
-    height: "25vh",
-  })
-  
-  
-  
-  gsap.to("#page2 #right #right-img", {
-  
-    scrollTrigger: {
-      trigger: "#page2 #right #right-img",
-      scroller: "#main",
-      end: "top 50%",
-      scrub: true,
-    },
-    height: "25vh",
-  })
-  
-  
-  gsap.to("#page3 #left #left-img ", {
-  
-    scrollTrigger: {
-      trigger: "#page3 #left #left-img ",
-      scroller: "#main",
-      end: "top 50%",
-      scrub: true,
-    },
-    height: "25vh",
-  })
-  
-  gsap.to("#page3 #right #right-img ", {
-  
-    scrollTrigger: {
-      trigger: "#page3 #right #right-img",
-      scroller: "#main",
-      end: "top 30%",
-      scrub: true,
-    },
-    height: "25vh",
-  })
-  
-  
-  
-  
-  gsap.to(".img-anim", {
-  
-    scrollTrigger: {
-      trigger: ".img-anim",
-      scroller: "#main",
-      end: "top 30%",
-      scrub: true,
-    },
-    height: "21vh",
-  })
-
-}
-
-function ImageAnimation(){
-
-
-  gsap.to("#page2 #left #lft-img", {
-
-    scrollTrigger: {
-      trigger: "#page2 #left #lft-img",
-      scroller: "#main",
-      end: "top 50%",
-      scrub: true,
-    },
-    height: "40vh",
-  })
-  
-  
-  
-  gsap.to("#page2 #right #right-img", {
-  
-    scrollTrigger: {
-      trigger: "#page2 #right #right-img",
-      scroller: "#main",
-      end: "top 50%",
-      scrub: true,
-    },
-    height: "35vh",
-  })
-  
-  
-  gsap.to("#page3 #left #left-img ", {
-  
-    scrollTrigger: {
-      trigger: "#page3 #left #left-img ",
-      scroller: "#main",
-      end: "top 50%",
-      scrub: true,
-    },
-    height: "45vh",
-  })
-  
-  gsap.to("#page3 #right #right-img ", {
-  
-    scrollTrigger: {
-      trigger: "#page3 #right #right-img",
-      scroller: "#main",
-      end: "top 30%",
-      scrub: true,
-    },
-    height: "50vh",
-  })
-  
-  
-  
-  
-  gsap.to(".img-anim", {
-  
-    scrollTrigger: {
-      trigger: ".img-anim",
-      scroller: "#main",
-      end: "top 30%",
-      scrub: true,
-    },
-    height: "40vh",
-  })
-
-
-}
-
-
-if (window.innerWidth<=500) {
-
-show();
-NavAndMainPageAnimation();
-ImageAnimationMobile();
-
-  
-}
-
-else{
-
-  show();
-NavAndMainPageAnimation();
-ImageAnimation();
-}
-
-
-
-
-
-
-
+OpenCloseButton()
