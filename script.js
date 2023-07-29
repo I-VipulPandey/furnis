@@ -10,7 +10,7 @@ document.querySelector('.home').addEventListener('click', function (e) {
 document.querySelector('.shop').addEventListener('click', function (e) {
   e.preventDefault()
 
-  document.querySelector('#page2').scrollIntoView({ behavior: "smooth" })
+  document.querySelector('#page3').scrollIntoView({ behavior: "smooth" })
 
 })
 
@@ -43,8 +43,8 @@ function OpenCloseButton() {
       full.style.transform = `translateX(0%)`;
 
 
-      line1.style.transform = `rotate(45deg) translate(-7px, 5px)`;
-      line2.style.transform = `rotate(-45deg) translate(-1px, -13px)`;
+      line1.style.transform = `rotate(45deg) translate(-1px, 10px)`;
+      line2.style.transform = `rotate(-45deg) translate(-1px, -10px)`;
        
 
       clickCounter = 0;
