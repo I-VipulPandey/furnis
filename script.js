@@ -1,32 +1,43 @@
-
-document.querySelector('.home').addEventListener('click', function (e) {
-  e.preventDefault()
-
-  document.querySelector('#page1').scrollIntoView({ behavior: "smooth" })
-
+function linkNavigator() {
+  
+  document.querySelectorAll('.home').forEach(function (elm) {
+    elm.addEventListener('click', function (e) {
+      e.preventDefault()
+    
+      document.querySelector('#page1').scrollIntoView({ behavior: "smooth" })
+    
+    
+    })
 })
 
 
-document.querySelector('.shop').addEventListener('click', function (e) {
-  e.preventDefault()
-
-  document.querySelector('#page3').scrollIntoView({ behavior: "smooth" })
-
+  document.querySelectorAll('.shop').forEach(function (elm) {
+    elm.addEventListener('click', function (e) {
+      e.preventDefault()
+    
+      document.querySelector('#page3').scrollIntoView({ behavior: "smooth" })
+    
+    })
 })
 
-document.querySelector('.blog').addEventListener('click', function (e) {
-  e.preventDefault()
-
-  document.querySelector('#page5').scrollIntoView({ behavior: "smooth" })
-
+  document.querySelectorAll('.blog').forEach(function (elm) {
+    elm.addEventListener('click', function (e) {
+      e.preventDefault()
+    
+      document.querySelector('#page5').scrollIntoView({ behavior: "smooth" })
+    
+    })
 })
 
-document.querySelector('.contact').addEventListener('click', function (e) {
-  e.preventDefault()
-
-  document.querySelector('footer').scrollIntoView({ behavior: "smooth" })
-
+  document.querySelectorAll('.contact').forEach(function (elm) {
+    elm.addEventListener('click', function (e) {
+      e.preventDefault()
+    
+      document.querySelector('footer').scrollIntoView({ behavior: "smooth" })
+    
+    })
 })
+}
 
 function OpenCloseButton() {
 
@@ -61,3 +72,6 @@ function OpenCloseButton() {
 }
 
 OpenCloseButton()
+
+linkNavigator()
+
