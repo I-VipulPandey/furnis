@@ -19,6 +19,11 @@
     src: url("assets/Oldenburg-Regular.ttf");
 }
 
+a:hover{
+    border-bottom: 1px solid #111;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+}
+
 
 button {
     cursor: pointer;
@@ -182,6 +187,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    cursor: pointer;
 
 }
 
